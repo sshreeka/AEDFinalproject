@@ -13,20 +13,20 @@ import java.util.ArrayList;
 
 /**
  *
- * @author nikhil
+ * @author sshreeka sshreeka
  */
 public class Person {
     private String Name;
     public String UserName;
     private String vaccinationStatus = "No update";
-    private String role;
+    private String role = "No update";
     private String Travelling = "No update";
     private String testResult = "No update";
     private AgeGroup ageGroup;
     private LocalDate dateOfBirth;
     private String critical = "Critical";
     private String recovered;
-    private String Status;
+    private String Status = "No update";
     private int Temp;
     private int O2;
 
@@ -155,7 +155,7 @@ public class Person {
         this.UserName = UserName;
     }
     
-    private String address;
+    private String address= "No update";
     private String number;
 
     public Person(String UserName){
