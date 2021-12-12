@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author sshreeka sshre`eka
+ * @author swathisharma
  */
 public class AdmissionRole extends Role{
 

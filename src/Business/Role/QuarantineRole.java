@@ -12,7 +12,7 @@ import userinterface.Quarantine.QuarantineJPanel;
 
 /**
  *
- * @author sshreeka sshreeka
+ * @author swathisharma
  */
 public class QuarantineRole extends Role{
        public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem business) {

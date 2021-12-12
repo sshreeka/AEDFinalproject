@@ -20,7 +20,7 @@ import userinterface.SystemAdminWorkArea.ManageQuarantine;
 
 /**
  *
- * @author sshreeka sshreeka
+ * @author swathisharma
  */
 public class TestingAreaJPanel extends javax.swing.JPanel {
 

@@ -15,7 +15,7 @@ import userinterface.TestingCenter.doTestJPanel;
 
 /**
  *
- * @author sshreeka sshreeka
+ * @author swathisharma
  */
 public class VaccinationJPanel extends javax.swing.JPanel {
 

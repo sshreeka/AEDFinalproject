@@ -13,7 +13,7 @@ import javax.swing.JLabel;
 
 /**
  *
- * @author sshreeka  
+ * @author swathisharma  
  */
 public class UserAccountDirectory {
    //private RestaurantDirectory resDir;

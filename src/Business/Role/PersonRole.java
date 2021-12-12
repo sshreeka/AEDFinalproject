@@ -13,7 +13,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author sshreeka  
+ * @author swathisharma  
  */
 public class PersonRole extends Role{
 

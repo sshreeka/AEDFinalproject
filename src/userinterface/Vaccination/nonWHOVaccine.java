@@ -22,7 +22,7 @@ import java.util.Date;
 
 /**
  *
- * @author sshreeka sshreeka
+ * @author swathisharma
  */
 public class nonWHOVaccine extends javax.swing.JPanel {
 

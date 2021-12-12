@@ -11,7 +11,7 @@ import javax.swing.JPanel;
 import userinterface.TestingCenter.TestingAreaJPanel;
 /**
  *
- * @author sshreeka harold
+ * @author swathisharma
  */
 public class TestingCenterRole extends Role {
 
