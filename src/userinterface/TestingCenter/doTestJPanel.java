@@ -59,6 +59,9 @@ public class doTestJPanel extends javax.swing.JPanel {
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
 
+        setBackground(new java.awt.Color(234, 230, 251));
+
+        networkTable.setFont(new java.awt.Font("Cantarell", 0, 15)); // NOI18N
         networkTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -87,8 +90,10 @@ public class doTestJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(networkTable);
 
+        jLabel1.setFont(new java.awt.Font("Cantarell", 1, 22)); // NOI18N
         jLabel1.setText("COVID TEST ROOM");
 
+        jButton1.setFont(new java.awt.Font("Cantarell", 1, 15)); // NOI18N
         jButton1.setText("Click here to Test");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,6 +101,7 @@ public class doTestJPanel extends javax.swing.JPanel {
             }
         });
 
+        Backbtn.setFont(new java.awt.Font("Cantarell", 1, 15)); // NOI18N
         Backbtn.setText("Back");
         Backbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -157,7 +163,7 @@ public class doTestJPanel extends javax.swing.JPanel {
                     .addComponent(jRadioButton1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRadioButton2)
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addContainerGap(108, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

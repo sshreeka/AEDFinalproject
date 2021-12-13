@@ -75,6 +75,8 @@ public class nonWHOVaccine extends javax.swing.JPanel {
             }
         });
 
+        setBackground(new java.awt.Color(234, 230, 251));
+
         getWHORadio.setText("Get WHO approved vaccine");
         getWHORadio.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,6 +105,7 @@ public class nonWHOVaccine extends javax.swing.JPanel {
             }
         });
 
+        jButton1.setFont(new java.awt.Font("Cantarell", 1, 15)); // NOI18N
         jButton1.setText("Confirm Appointment");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,6 +113,7 @@ public class nonWHOVaccine extends javax.swing.JPanel {
             }
         });
 
+        Backbtn.setFont(new java.awt.Font("Cantarell", 1, 15)); // NOI18N
         Backbtn.setText("Back");
         Backbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
