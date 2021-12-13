@@ -60,6 +60,9 @@ public class doTestQuarantineJPanel extends javax.swing.JPanel {
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
 
+        setBackground(new java.awt.Color(234, 230, 251));
+
+        networkTable.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         networkTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -88,8 +91,10 @@ public class doTestQuarantineJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(networkTable);
 
+        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
         jLabel1.setText("COVID TEST ROOM");
 
+        jButton1.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         jButton1.setText("Click here to Test");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -97,6 +102,7 @@ public class doTestQuarantineJPanel extends javax.swing.JPanel {
             }
         });
 
+        Backbtn.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         Backbtn.setText("Back");
         Backbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -104,6 +110,7 @@ public class doTestQuarantineJPanel extends javax.swing.JPanel {
             }
         });
 
+        jRadioButton1.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         jRadioButton1.setText("Positive");
         jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -111,6 +118,7 @@ public class doTestQuarantineJPanel extends javax.swing.JPanel {
             }
         });
 
+        jRadioButton2.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         jRadioButton2.setText("Negative");
         jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -122,10 +130,10 @@ public class doTestQuarantineJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(80, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(80, 80, 80)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 960, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(62, 62, 62))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addGap(455, 455, 455)
                 .addComponent(jLabel1)
@@ -140,7 +148,7 @@ public class doTestQuarantineJPanel extends javax.swing.JPanel {
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jRadioButton1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(176, 176, 176)
                         .addComponent(Backbtn)
                         .addGap(75, 75, 75))))
         );
@@ -158,7 +166,7 @@ public class doTestQuarantineJPanel extends javax.swing.JPanel {
                     .addComponent(jRadioButton1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jRadioButton2)
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addContainerGap(91, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
