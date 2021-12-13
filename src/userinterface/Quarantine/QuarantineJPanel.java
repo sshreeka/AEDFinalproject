@@ -120,7 +120,7 @@ public class QuarantineJPanel extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
         jLabel1.setText("QUARANTINE FACILITY");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 10, 292, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 10, 310, -1));
 
         jButton1.setFont(new java.awt.Font("Helvetica Neue", 1, 13)); // NOI18N
         jButton1.setText("Positive Patients Vital Check");
