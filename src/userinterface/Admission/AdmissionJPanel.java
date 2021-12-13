@@ -72,9 +72,12 @@ public class AdmissionJPanel extends javax.swing.JPanel {
         jScrollPane4 = new javax.swing.JScrollPane();
         networkTable3 = new javax.swing.JTable();
 
+        setBackground(new java.awt.Color(234, 230, 251));
+
         jLabel1.setFont(new java.awt.Font("Cantarell", 1, 24)); // NOI18N
         jLabel1.setText("Covid Admission Center");
 
+        jButton3.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         jButton3.setText("Discharge Patients");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -82,6 +85,7 @@ public class AdmissionJPanel extends javax.swing.JPanel {
             }
         });
 
+        jButton4.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         jButton4.setText("Vital Check");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -89,6 +93,7 @@ public class AdmissionJPanel extends javax.swing.JPanel {
             }
         });
 
+        jButton6.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         jButton6.setText("Vital Check");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -96,6 +101,7 @@ public class AdmissionJPanel extends javax.swing.JPanel {
             }
         });
 
+        jButton7.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         jButton7.setText("Do test");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -103,6 +109,7 @@ public class AdmissionJPanel extends javax.swing.JPanel {
             }
         });
 
+        jButton8.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         jButton8.setText("Do test");
         jButton8.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,6 +117,7 @@ public class AdmissionJPanel extends javax.swing.JPanel {
             }
         });
 
+        networkTable1.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         networkTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -138,6 +146,7 @@ public class AdmissionJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(networkTable1);
 
+        jButton9.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         jButton9.setText("Check for Non Critical");
         jButton9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -145,6 +154,7 @@ public class AdmissionJPanel extends javax.swing.JPanel {
             }
         });
 
+        jButton2.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         jButton2.setText("Check for Critical");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -152,6 +162,7 @@ public class AdmissionJPanel extends javax.swing.JPanel {
             }
         });
 
+        networkTable.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         networkTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -180,6 +191,7 @@ public class AdmissionJPanel extends javax.swing.JPanel {
         });
         jScrollPane3.setViewportView(networkTable);
 
+        networkTable3.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
         networkTable3.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -212,43 +224,48 @@ public class AdmissionJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton4)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton8))
-                    .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 515, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton9)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton6)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton7))
-                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 515, javax.swing.GroupLayout.PREFERRED_SIZE)))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(370, 370, 370)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton3)
-                            .addComponent(jLabel1)))
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton2)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton4)
+                                .addGap(18, 18, 18)
+                                .addComponent(jButton8))
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 515, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(157, 157, 157)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 515, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jButton9)
+                                .addGap(26, 26, 26)
+                                .addComponent(jButton6)
+                                .addGap(35, 35, 35)
+                                .addComponent(jButton7))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(105, 105, 105)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 960, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(128, Short.MAX_VALUE))
+                        .addGap(118, 118, 118)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 960, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(115, 115, 115))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jButton3)
+                                .addGap(496, 496, 496)))))
+                .addGap(0, 0, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(448, 448, 448)
+                .addComponent(jLabel1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(26, 26, 26)
+                .addGap(24, 24, 24)
                 .addComponent(jLabel1)
-                .addGap(18, 24, Short.MAX_VALUE)
+                .addGap(43, 43, 43)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -259,16 +276,16 @@ public class AdmissionJPanel extends javax.swing.JPanel {
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton9)
                             .addComponent(jButton6)
-                            .addComponent(jButton7)
-                            .addComponent(jButton9))
-                        .addGap(49, 49, 49)
+                            .addComponent(jButton7))
+                        .addGap(20, 20, 20)
                         .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(51, 51, 51)
+                .addGap(146, 146, 146)
                 .addComponent(jButton3)
-                .addGap(41, 41, 41)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addGap(21, 21, 21))
         );
     }// </editor-fold>//GEN-END:initComponents
 
