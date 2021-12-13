@@ -65,6 +65,10 @@ public class VaccinationJPanel extends javax.swing.JPanel {
         whoRadio = new javax.swing.JRadioButton();
         whoNotRadio = new javax.swing.JRadioButton();
 
+        setBackground(new java.awt.Color(234, 230, 251));
+        setToolTipText("");
+
+        jLabel1.setFont(new java.awt.Font("Cantarell", 1, 22)); // NOI18N
         jLabel1.setText("Vaccination Status");
 
         jRadioButton1.setText("Yes");
@@ -85,6 +89,7 @@ public class VaccinationJPanel extends javax.swing.JPanel {
             }
         });
 
+        Backbtn.setFont(new java.awt.Font("Cantarell", 1, 18)); // NOI18N
         Backbtn.setText("Back");
         Backbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -127,15 +132,15 @@ public class VaccinationJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(whoNotRadio)
                     .addComponent(whoRadio)
-                    .addComponent(jLabel1))
-                .addContainerGap(432, Short.MAX_VALUE))
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(369, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(jLabel1)
-                .addGap(60, 60, 60)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(52, 52, 52)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jRadioButton1)
                     .addComponent(jLabel2)
@@ -146,7 +151,7 @@ public class VaccinationJPanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jRadioButton2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 133, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 122, Short.MAX_VALUE)
                 .addComponent(Backbtn)
                 .addGap(104, 104, 104))
         );
