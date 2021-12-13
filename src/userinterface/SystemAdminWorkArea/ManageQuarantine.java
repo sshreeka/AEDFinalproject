@@ -21,7 +21,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Nikhil
+ * @author Ni
  */
 public class ManageQuarantine extends javax.swing.JPanel {
 
@@ -55,19 +55,19 @@ public class ManageQuarantine extends javax.swing.JPanel {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         networkTable = new javax.swing.JTable();
-        nameJTextField = new javax.swing.JTextField();
+        txtName = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         uNameTextField = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         PasswordField = new javax.swing.JPasswordField();
-        updateBtn = new javax.swing.JButton();
-        deleteBtn = new javax.swing.JButton();
-        ConfirmBtn = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         Backbtn = new javax.swing.JButton();
         submit = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        deleteBtn = new javax.swing.JButton();
+        ConfirmBtn = new javax.swing.JButton();
+        updateBtn = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(175, 206, 203));
 
@@ -109,27 +109,6 @@ public class ManageQuarantine extends javax.swing.JPanel {
             }
         });
 
-        updateBtn.setText("Update");
-        updateBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                updateBtnActionPerformed(evt);
-            }
-        });
-
-        deleteBtn.setText("Delete");
-        deleteBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteBtnActionPerformed(evt);
-            }
-        });
-
-        ConfirmBtn.setText("Confirm Update");
-        ConfirmBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ConfirmBtnActionPerformed(evt);
-            }
-        });
-
         jLabel5.setText("Username");
 
         Backbtn.setText("Back");
@@ -149,6 +128,27 @@ public class ManageQuarantine extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jLabel1.setText("Quarantine ");
 
+        deleteBtn.setText("Delete");
+        deleteBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteBtnActionPerformed(evt);
+            }
+        });
+
+        ConfirmBtn.setText("Confirm Update");
+        ConfirmBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ConfirmBtnActionPerformed(evt);
+            }
+        });
+
+        updateBtn.setText("Update");
+        updateBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -164,14 +164,6 @@ public class ManageQuarantine extends javax.swing.JPanel {
                             .addComponent(submit)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(55, 55, 55)
-                .addComponent(updateBtn)
-                .addGap(82, 82, 82)
-                .addComponent(deleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(51, 51, 51)
-                .addComponent(ConfirmBtn)
-                .addGap(145, 145, 145))
             .addGroup(layout.createSequentialGroup()
                 .addGap(58, 58, 58)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -185,7 +177,7 @@ public class ManageQuarantine extends javax.swing.JPanel {
                                 .addGroup(layout.createSequentialGroup()
                                     .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGap(101, 101, 101)
-                                    .addComponent(nameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 402, Short.MAX_VALUE)
@@ -196,6 +188,14 @@ public class ManageQuarantine extends javax.swing.JPanel {
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(jLabel2)
                                 .addContainerGap())))))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(102, 102, 102)
+                .addComponent(updateBtn)
+                .addGap(101, 101, 101)
+                .addComponent(deleteBtn)
+                .addGap(151, 151, 151)
+                .addComponent(ConfirmBtn)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -205,7 +205,7 @@ public class ManageQuarantine extends javax.swing.JPanel {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(nameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(33, 33, 33)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -218,27 +218,164 @@ public class ManageQuarantine extends javax.swing.JPanel {
                 .addComponent(submit)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(deleteBtn)
+                    .addComponent(updateBtn)
+                    .addComponent(ConfirmBtn))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(Backbtn)
                 .addGap(53, 53, 53))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(deleteBtn)
-                    .addComponent(ConfirmBtn)
-                    .addComponent(updateBtn))
-                .addGap(81, 81, 81))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+     
+    
+    private void populateNetworkTable() {
+        DefaultTableModel model = (DefaultTableModel) networkTable.getModel();
+        
+        model.setRowCount(0);
+        
+        for (UserAccount user : system.getUserAccountDirectory().getUserAccountList()) {
+           
+            if ("Business.Role.QuarantineRole".equals(user.getRole().getClass().getName())) {
+                            
+                Object[] row = new Object[3];
+               
+                row[0] = user.getName();
+                row[1] = user.getUsername();
+                row[2] = user.getPassword();
+                model.addRow(row);
+            
+                }}
+           
+    }
+    private void PasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_PasswordFieldActionPerformed
+
+    private void BackbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackbtnActionPerformed
+        // TODO add your handling code here:
+       userProcessContainer.remove(this);
+        Component[] componentArray = userProcessContainer.getComponents();
+        Component component = componentArray[componentArray.length - 1];
+//        SystemAdminWorkAreaJPanel sysAdminwjp = (SystemAdminWorkAreaJPanel) component;
+//        sysAdminwjp.populateTree();
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+    }//GEN-LAST:event_BackbtnActionPerformed
+
+    private void submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitActionPerformed
+        // TODO add your handling code here:
+        String name = txtName.getText();
+        String uname=uNameTextField.getText();
+        String password=PasswordField.getText();
+        try {
+            if(name==null || name.isEmpty()){
+                throw new NullPointerException(" Name field is Empty");
+
+            }else if(name.length()<5 || Pattern.matches("^[A-Za-z]+$", name)==false){
+                throw new Exception("Please enter valid  Name");
+
+            }
+        } catch(NullPointerException e){
+            JOptionPane.showMessageDialog(null, " Name is Empty");
+
+            return;
+
+        }catch (Exception e){
+            JOptionPane.showMessageDialog(null, "  Name is invalid");
+
+            return;
+        }
+
+        try {
+            if(uname==null || uname.isEmpty()){
+                throw new NullPointerException("User Name field is Empty");
+
+            }else if(uname.length()<5){
+                throw new Exception("Please enter valid User Name");
+
+            }
+        } catch(NullPointerException e){
+            JOptionPane.showMessageDialog(null, "User Name is Empty");
+
+            return;
+
+        }catch (Exception e){
+            JOptionPane.showMessageDialog(null, " User Name is invalid");
+
+            return;
+        }
+
+        try {
+
+            if(password==null || password.isEmpty()){
+                throw new NullPointerException("Password field is Empty");
+            }else if(Pattern.matches("^(?=(.*[a-z]){1,})(?=(.*[\\d]){1,})(?=(.*[\\W]){1,})(?!.*\\s).{5,30}$", password)==false){
+                throw new Exception("Invalid Password");
+            }
+
+        }  catch(NullPointerException e){
+            JOptionPane.showMessageDialog(null, "Password is Empty");
+
+            return;
+        }catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Password is of invalid pattern");
+
+            return;
+        }
+
+        if (system.getUserAccountDirectory().checkIfUsernameIsUnique(uname)==false) {
+            JOptionPane.showMessageDialog(null,"  User Name already exists ");
+        }else{
+
+            UserAccount ua1 =system.getUserAccountDirectory().createUserAccount(name,uname,password,null, new QuarantineRole());
+
+            Quarantine QuarantineCenter= system.getQuarantineDirectory().createQuarantineCenter(uname);
+
+            populateNetworkTable();
+            txtName.setText("");
+            uNameTextField.setText("");
+            PasswordField.setText("");
+            //        ContactField.setText("");
+            //        addressField.setText("");
+        }
+    }//GEN-LAST:event_submitActionPerformed
+
+    private void deleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBtnActionPerformed
+        // TODO add your handling code here:
+        int selectedRow = networkTable.getSelectedRow();
+        if(selectedRow>=0){
+            int selectionButton = JOptionPane.YES_NO_OPTION;
+            int selectionResult = JOptionPane.showConfirmDialog(null, "Are you sure to delete??","Warning",selectionButton);
+            if(selectionResult == JOptionPane.YES_OPTION){
+                String username= (String) networkTable.getValueAt(selectedRow, 1);
+                String pwd= (String) networkTable.getValueAt(selectedRow, 2);
+                UserAccount user=system.getUserAccountDirectory().authenticateUser(username, pwd);
+
+                //UserAccount user = (UserAccount) networkJTable.getValueAt(selectedRow, 0);
+                system.getUserAccountDirectory().deleteUserAccount(user);
+                //ystem.getCustomerDirectory().deleteCustomer(user.getUsername());
+
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Please select a Row!!");
+        }
+        populateNetworkTable();
+    }//GEN-LAST:event_deleteBtnActionPerformed
 
     private void ConfirmBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmBtnActionPerformed
         // TODO add your handling code here:
 
-        String name = nameJTextField.getText();
+        String name = txtName.getText();
         String uname=uNameTextField.getText();
         String password=PasswordField.getText();
+        //        String contact = ContactField.getText();
+        //        String address= AddressFiels.getText();
 
         try {
             if(name==null || name.isEmpty()){
@@ -302,37 +439,18 @@ public class ManageQuarantine extends javax.swing.JPanel {
 
             system.getUserAccountDirectory().updateUserAccount(user,name,uname,password);
             populateNetworkTable();
-            submitJButton.setEnabled(true);
+            submit.setEnabled(true);
             deleteBtn.setEnabled(true);
             updateBtn.setEnabled(true);
             ConfirmBtn.setEnabled(false);
-            nameJTextField.setText("");
+
+            txtName.setText("");
             uNameTextField.setText("");
             PasswordField.setText("");
+            //            ContactField.setText("");
+            //            AddressFiels.setText("");
         }
     }//GEN-LAST:event_ConfirmBtnActionPerformed
-
-    private void deleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBtnActionPerformed
-        // TODO add your handling code here:
-        int selectedRow = networkTable.getSelectedRow();
-        if(selectedRow>=0){
-            int selectionButton = JOptionPane.YES_NO_OPTION;
-            int selectionResult = JOptionPane.showConfirmDialog(null, "Are you sure to delete??","Warning",selectionButton);
-            if(selectionResult == JOptionPane.YES_OPTION){
-                String username= (String) networkTable.getValueAt(selectedRow, 1);
-                String pwd= (String) networkTable.getValueAt(selectedRow, 2);
-                UserAccount user=system.getUserAccountDirectory().authenticateUser(username, pwd);
-
-                //UserAccount user = (UserAccount) networkJTable.getValueAt(selectedRow, 0);
-                system.getUserAccountDirectory().deleteUserAccount(user);
-                system.getQuarantineDirectory().deleteQuarantineDirectory(username);
-         //       system.getRestaurantDirectory().deleteRestaurent(user.getUsername());
-                populateNetworkTable();
-            }
-        }else{
-            JOptionPane.showMessageDialog(null, "Please select a Row!!");
-        }
-    }//GEN-LAST:event_deleteBtnActionPerformed
 
     private void updateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBtnActionPerformed
         // TODO add your handling code here:
@@ -343,144 +461,23 @@ public class ManageQuarantine extends javax.swing.JPanel {
             String pwd= (String) networkTable.getValueAt(selectRow, 2);
             user=system.getUserAccountDirectory().authenticateUser(username, pwd);
 
-            nameJTextField.setText(user.getName()+"");
+            txtName.setText(user.getName()+"");
             uNameTextField.setText(user.getUsername()+"");
             PasswordField.setText(user.getPassword()+"");
+            //            ContactField.setText(user.getContact()+ "");
+            //            AddressFiels.setText(user.getAddress()+ "");
             // system.getUserAccountDirectory().deleteUserAccount(user);
 
         }
         else {
             JOptionPane.showMessageDialog(null,"Please select a row");
         }
-        submitJButton.setEnabled(false);
+
+        submit.setEnabled(false);
         deleteBtn.setEnabled(false);
         updateBtn.setEnabled(false);
         ConfirmBtn.setEnabled(true);
     }//GEN-LAST:event_updateBtnActionPerformed
-     
-    
-    private void populateNetworkTable() {
-        DefaultTableModel model = (DefaultTableModel) networkTable.getModel();
-        
-        model.setRowCount(0);
-        
-        for (UserAccount user : system.getUserAccountDirectory().getUserAccountList()) {
-           
-            if ("Business.Role.QuarantineRole".equals(user.getRole().getClass().getName())) {
-                
-                for(Quarantine qtn:system.getQuarantineDirectory().getQuarantineList()){
-                    if (user.getUsername().equals(qtn.getUserName())){
-            
-                Object[] row = new Object[4];
-               
-                row[0] = user.getName();
-                row[1] = user.getUsername();
-                row[2] = user.getPassword();
-                model.addRow(row);
-            }
-                }}}
-           
-    }
-    private void PasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_PasswordFieldActionPerformed
-
-    private void BackbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackbtnActionPerformed
-        // TODO add your handling code here:
-       userProcessContainer.remove(this);
-        Component[] componentArray = userProcessContainer.getComponents();
-        Component component = componentArray[componentArray.length - 1];
-//        SystemAdminWorkAreaJPanel sysAdminwjp = (SystemAdminWorkAreaJPanel) component;
-//        sysAdminwjp.populateTree();
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
-    }//GEN-LAST:event_BackbtnActionPerformed
-
-    private void submitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitActionPerformed
-        // TODO add your handling code here:
-        String name = nameJTextField.getText();
-        String uname=uNameTextField.getText();
-        String password=PasswordField.getText();
-        try {
-             if(name==null || name.isEmpty()){
-                throw new NullPointerException(" Name field is Empty");
-                
-                
-            }else if(name.length()<5 || Pattern.matches("^[A-Za-z]+$", name)==false){
-                throw new Exception("Please enter valid  Name");
-                
-            }
-        } catch(NullPointerException e){
-            JOptionPane.showMessageDialog(null, " Name is Empty");
-           
-            return;
-            
-        }catch (Exception e){
-            JOptionPane.showMessageDialog(null, "  Name is invalid");
-       
-            return;
-        }
-        
-        try {
-             if(uname==null || uname.isEmpty()){
-                throw new NullPointerException("User Name field is Empty");
-                
-                
-            }else if(uname.length()<5){
-                throw new Exception("Please enter valid User Name");
-                
-            }
-        } catch(NullPointerException e){
-            JOptionPane.showMessageDialog(null, "User Name is Empty");
-           
-            return;
-            
-        }catch (Exception e){
-            JOptionPane.showMessageDialog(null, " User Name is invalid");
-       
-            return;
-        }
-        
-         try {
-             
-            if(password==null || password.isEmpty()){
-                throw new NullPointerException("Password field is Empty");
-            }else if(Pattern.matches("^(?=(.*[a-z]){1,})(?=(.*[\\d]){1,})(?=(.*[\\W]){1,})(?!.*\\s).{5,30}$", password)==false){
-                throw new Exception("Invalid Password");
-            }
-            
-            
-        }  catch(NullPointerException e){
-             JOptionPane.showMessageDialog(null, "Password is Empty");
-            
-             
-             return;
-        }catch (Exception e) {
-             JOptionPane.showMessageDialog(null, "Password is of invalid pattern");
-             
-             
-             return;
-        }
-         
-         
-        if (system.getUserAccountDirectory().checkIfUsernameIsUnique(uname)==false) {
-            JOptionPane.showMessageDialog(null,"  User Name already exists ");
-        }else{
-            
-        UserAccount ua1 =system.getUserAccountDirectory().createUserAccount(name,uname,password,null, new QuarantineRole());
-        
-        Quarantine QuarantineCenter= system.getQuarantineDirectory().createQuarantineCenter(uname);
-            
-
-
-        populateNetworkTable();
-        nameJTextField.setText("");
-        uNameTextField.setText("");
-        PasswordField.setText("");
-//        ContactField.setText("");
-//        addressField.setText("");
-        }
-    }//GEN-LAST:event_submitActionPerformed
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {                                            
         userProcessContainer.remove(this);
@@ -494,7 +491,7 @@ public class ManageQuarantine extends javax.swing.JPanel {
     
     private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {                                              
 
-        String name = nameJTextField.getText();
+        String name = txtName.getText();
         String uname=uNameTextField.getText();
         String password=PasswordField.getText();
               
@@ -567,7 +564,7 @@ public class ManageQuarantine extends javax.swing.JPanel {
        // UserAccount ua1 =system.getUserAccountDirectory().createUserAccount(name,uname,password, null, new CustomerRole());
       //  Restaurant restro= system.getRestaurantDirectory().createRestaurantInfo(uname);
         populateNetworkTable();
-        nameJTextField.setText("");
+        txtName.setText("");
         uNameTextField.setText("");
         PasswordField.setText("");
 //        ContactField.setText("");
@@ -586,9 +583,9 @@ public class ManageQuarantine extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField nameJTextField;
     private javax.swing.JTable networkTable;
     private javax.swing.JButton submit;
+    private javax.swing.JTextField txtName;
     private javax.swing.JTextField uNameTextField;
     private javax.swing.JButton updateBtn;
     // End of variables declaration//GEN-END:variables

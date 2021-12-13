@@ -11,6 +11,7 @@ import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.awt.Component;
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
@@ -33,15 +34,13 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
     private JPanel userProcessContainer;
     private EcoSystem system;
     UserAccount user;
- 
+
     public ManagePersonJPanel(JPanel userProcessContainer, EcoSystem system) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.system = system;
-      //  populateUsers();
 
          populateNetworkTable();
-
          ConfirmBtn.setEnabled(false);
     }
 
@@ -161,10 +160,18 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap(1107, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(217, 217, 217)
+                        .addComponent(updateBtn)
+                        .addGap(82, 82, 82)
+                        .addComponent(deleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(51, 51, 51)
+                        .addComponent(ConfirmBtn)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 467, Short.MAX_VALUE)
                         .addComponent(Backbtn))
-                    .addComponent(jScrollPane1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1)))
                 .addContainerGap())
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
@@ -186,24 +193,24 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
                                         .addComponent(nameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(23, 665, Short.MAX_VALUE)
-                    .addComponent(updateBtn)
-                    .addGap(82, 82, 82)
-                    .addComponent(deleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(51, 51, 51)
-                    .addComponent(ConfirmBtn)
-                    .addGap(90, 90, 90)))
+                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(279, Short.MAX_VALUE)
+                .addContainerGap(378, Short.MAX_VALUE)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(117, 117, 117)
-                .addComponent(Backbtn)
-                .addGap(42, 42, 42))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(Backbtn)
+                        .addGap(42, 42, 42))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(deleteBtn)
+                            .addComponent(ConfirmBtn)
+                            .addComponent(updateBtn))
+                        .addGap(26, 26, 26))))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(12, 12, 12)
@@ -222,11 +229,7 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
                         .addComponent(PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGap(41, 41, 41)
                     .addComponent(submit)
-                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 423, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(deleteBtn)
-                        .addComponent(ConfirmBtn)
-                        .addComponent(updateBtn))))
+                    .addContainerGap(460, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -298,7 +301,8 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
 
             UserAccount ua1 =system.getUserAccountDirectory().createUserAccount(name,uname,password,null, new PersonRole());
             Person person= system.getPersonDirectory().createCustomer(uname);
-   //         person.setName(name);
+            
+        //    person.setName(name);
             populateNetworkTable();
             nameJTextField.setText("");
             uNameTextField.setText("");
@@ -315,9 +319,13 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
         for (UserAccount uuserr : system.getUserAccountDirectory().getUserAccountList()) {
            
             if ("Business.Role.PersonRole".equals(uuserr.getRole().getClass().getName())) {
-                
+                System.out.println("Name is "+uuserr.getRole().getClass().getName());
                  for(Person cust:system.getPersonDirectory().getCustList()){
-            if(uuserr.getUsername().equals(cust.getUserName())){
+                     System.out.println(cust.getName());
+                                          System.out.println(uuserr.getName());
+
+            if(uuserr.getUsername().equals(cust.getUserName()
+            )){
         
                 Object[] row = new Object[10];
                
@@ -336,6 +344,30 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
         }
     
     }
+    
+     private void populatePTable() {
+        DefaultTableModel model = (DefaultTableModel) networkTable.getModel();
+        
+        model.setRowCount(0);
+        
+        for (UserAccount uuserr : system.getUserAccountDirectory().getUserAccountList()) {
+           
+            if ("Business.Role.PersonRole".equals(uuserr.getRole().getClass().getName())) {
+                
+               
+                Object[] row = new Object[10];
+               
+                row[0] = uuserr.getName();
+                row[1] = uuserr.getUsername();
+                row[2] = uuserr.getPassword();
+ 
+                
+                model.addRow(row);
+            }
+                 }
+        }
+    
+    
     private void PasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_PasswordFieldActionPerformed
@@ -345,20 +377,25 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
         int selectRow = networkTable.getSelectedRow();
 
         if(selectRow>=0){
+           String user1= (String) networkTable.getValueAt(selectRow, 0);
+
             String username= (String) networkTable.getValueAt(selectRow, 1);
             String pwd= (String) networkTable.getValueAt(selectRow, 2);
             user=system.getUserAccountDirectory().authenticateUser(username, pwd);
 
+              
             nameJTextField.setText(user.getName()+"");
             uNameTextField.setText(user.getUsername()+"");
             PasswordField.setText(user.getPassword()+"");
-            // system.getUserAccountDirectory().deleteUserAccount(user);
+       
 
         }
         else {
             JOptionPane.showMessageDialog(null,"Please select a row");
         }
-       //submitJButton.setEnabled(false);
+        
+
+       submit.setEnabled(false);
         deleteBtn.setEnabled(false);
         updateBtn.setEnabled(false);
         ConfirmBtn.setEnabled(true);
@@ -374,6 +411,7 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
                 String username= (String) networkTable.getValueAt(selectedRow, 1);
                 String pwd= (String) networkTable.getValueAt(selectedRow, 2);
                 UserAccount user=system.getUserAccountDirectory().authenticateUser(username, pwd);
+                system.getPersonDirectory().deleteCustomer(user.getUsername());
 
                 //UserAccount user = (UserAccount) networkJTable.getValueAt(selectedRow, 0);
                 system.getUserAccountDirectory().deleteUserAccount(user);
@@ -448,20 +486,22 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
             return;
         }
 
-        if (system.getUserAccountDirectory().checkIfUsernameIsUnique(uname)==false) {
-            JOptionPane.showMessageDialog(null,"  User Name already exists ");
-        }else{
+
 
             system.getUserAccountDirectory().updateUserAccount(user,name,uname,password);
+          
             populateNetworkTable();
-         //   submitJButton.setEnabled(true);
+
+        
+            submit.setEnabled(true);
+
             deleteBtn.setEnabled(true);
             updateBtn.setEnabled(true);
             ConfirmBtn.setEnabled(false);
             nameJTextField.setText("");
             uNameTextField.setText("");
             PasswordField.setText("");
-        }
+        
     }//GEN-LAST:event_ConfirmBtnActionPerformed
 
     private void BackbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackbtnActionPerformed
@@ -493,61 +533,5 @@ public class ManagePersonJPanel extends javax.swing.JPanel {
     private javax.swing.JButton updateBtn;
     // End of variables declaration//GEN-END:variables
 
-       private void populateUsers() {
-          
-              for (int i=0;i < 10; i++) {
-                   System.out.println("ENrteing");
-                  String userName = firstNames.get(new Random().nextInt(firstNames.size()));
-                  String name= lastNames.get(new Random().nextInt(lastNames.size()));
-                  UserAccount ua1 =system.getUserAccountDirectory().createUserAccount(userName,name ,"passwd1!",null, new PersonRole());
-                  Person cust= system.getPersonDirectory().createCustomer(userName);
-                cust.setAddress((houseNum.get(new Random().nextInt(houseNum.size()))+" "+ communityNames.get(new Random().nextInt(communityNames.size())) + " "+ cityNames.get(new Random().nextInt(cityNames.size()))));
-                cust.setRole(Role.get(new Random().nextInt(Role.size())));
-                if (cust.getRole().equals("Traveller")){
-                                    cust.setTravelling(Flight.get(new Random().nextInt(Flight.size())));
-
-                }
-                else{
-                                                        cust.setTravelling("None");
-
-                }
-                
-                cust.setDateOfBirth(dateOfBirths.get(new Random().nextInt(dateOfBirths.size())));
-                cust.setName(name);
-              cust.setAgeGroup();
-              cust.setCritical("Non Critical");
-              cust.setRecovered("yes");
-              cust.setStatus("Yet to get tested");
-              
-                                 System.out.println("Name is "+cust.getName());
-
-        
-    
-}
-       }
-    
-    private static List<String> cityNames = Arrays.asList("Boston", "Seattle", "NewYork", "Texas","Sunnyvale","Bangalore","Delhi","Hydrabad","Chennai");
-    private static  List<String> communityNames = Arrays.asList("King", "Hudson", "Rockefeller","County", "Bay", "Ridge","Roxbury", "Ruggles", "MissionMain");
-    private static List<String> firstNames = Arrays.asList("Bob", "Bruce", "Flash", "Peter","Hank", "Jack", "Robert", "John","Richard", "Daniel", "Matthew", "Donald");
-    private static List<String> lastNames = Arrays.asList("Parker", "Wayne", "Catalyst", "Jason","Jonathan", "Larry", "Scott", "Benjamin","Gregory", "Raymond", "Dennis", "Jerry");
-    private static List<String> Role = Arrays.asList("Staff","Traveller");
-    private static List<String> Flight = Arrays.asList("Domestic","International");
-
-
-    private static List<LocalDate> dateOfBirths = Arrays.asList(
-            LocalDate.parse("1985-12-12"), 
-            LocalDate.parse("1999-11-23"),
-            LocalDate.parse("2021-01-01"),
-            LocalDate.parse("2021-02-15"),
-            LocalDate.parse("1956-12-31"), 
-            LocalDate.parse("1993-11-01"),
-            LocalDate.parse("2021-01-01"),
-            LocalDate.parse("2020-02-24"),
-            LocalDate.parse("1924-12-31"), 
-            LocalDate.parse("1999-11-10"),
-            LocalDate.parse("2015-01-09"),
-            LocalDate.parse("2021-03-25")
-    );
-    private static List<Integer> houseNum = Arrays.asList(121,90,49,51,69,70);
-
+     
     }
