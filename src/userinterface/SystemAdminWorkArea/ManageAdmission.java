@@ -25,7 +25,7 @@ public class ManageAdmission extends javax.swing.JPanel {
      * Creates new form ManageAdmission
      */
     
-         private JPanel userProcessContainer;
+    private JPanel userProcessContainer;
     private EcoSystem system;
     UserAccount user;
     
@@ -48,9 +48,6 @@ public class ManageAdmission extends javax.swing.JPanel {
 
         jLabel4 = new javax.swing.JLabel();
         PasswordField = new javax.swing.JPasswordField();
-        updateBtn = new javax.swing.JButton();
-        deleteBtn = new javax.swing.JButton();
-        ConfirmBtn = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         networkTable = new javax.swing.JTable();
@@ -60,33 +57,15 @@ public class ManageAdmission extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         uNameTextField = new javax.swing.JTextField();
+        updateBtn = new javax.swing.JButton();
+        ConfirmBtn = new javax.swing.JButton();
+        deleteBtn = new javax.swing.JButton();
 
         jLabel4.setText("Password");
 
         PasswordField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 PasswordFieldActionPerformed(evt);
-            }
-        });
-
-        updateBtn.setText("Update");
-        updateBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                updateBtnActionPerformed(evt);
-            }
-        });
-
-        deleteBtn.setText("Delete");
-        deleteBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteBtnActionPerformed(evt);
-            }
-        });
-
-        ConfirmBtn.setText("Confirm Update");
-        ConfirmBtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ConfirmBtnActionPerformed(evt);
             }
         });
 
@@ -139,6 +118,27 @@ public class ManageAdmission extends javax.swing.JPanel {
 
         jLabel3.setText("Name");
 
+        updateBtn.setText("Update");
+        updateBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateBtnActionPerformed(evt);
+            }
+        });
+
+        ConfirmBtn.setText("Confirm Update");
+        ConfirmBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ConfirmBtnActionPerformed(evt);
+            }
+        });
+
+        deleteBtn.setText("Delete");
+        deleteBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -154,15 +154,7 @@ public class ManageAdmission extends javax.swing.JPanel {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(submitJButton)
                                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 383, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(55, 55, 55)
-                        .addComponent(updateBtn)
-                        .addGap(82, 82, 82)
-                        .addComponent(deleteBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(51, 51, 51)
-                        .addComponent(ConfirmBtn)
-                        .addGap(90, 90, 90))
+                        .addGap(505, 505, 505))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(14, 14, 14)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -179,9 +171,17 @@ public class ManageAdmission extends javax.swing.JPanel {
                                             .addComponent(nameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
                                         .addComponent(PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 524, Short.MAX_VALUE)
-                                .addComponent(Backbtn)))))
-                .addContainerGap())
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(Backbtn)))
+                        .addContainerGap())))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(83, 83, 83)
+                .addComponent(updateBtn)
+                .addGap(101, 101, 101)
+                .addComponent(deleteBtn)
+                .addGap(151, 151, 151)
+                .addComponent(ConfirmBtn)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {PasswordField, nameJTextField, uNameTextField});
@@ -190,34 +190,30 @@ public class ManageAdmission extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(nameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(33, 33, 33)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(uNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(27, 27, 27)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(57, 57, 57)
-                        .addComponent(submitJButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 157, Short.MAX_VALUE)
-                        .addComponent(Backbtn))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGap(395, 395, 395)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(deleteBtn)
-                            .addComponent(ConfirmBtn)
-                            .addComponent(updateBtn))
-                        .addGap(28, 28, 28)))
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(nameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(uNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(27, 27, 27)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(PasswordField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(57, 57, 57)
+                .addComponent(submitJButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(deleteBtn)
+                    .addComponent(updateBtn)
+                    .addComponent(ConfirmBtn))
+                .addGap(55, 55, 55)
+                .addComponent(Backbtn)
                 .addContainerGap())
         );
 
@@ -228,131 +224,6 @@ public class ManageAdmission extends javax.swing.JPanel {
     private void PasswordFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PasswordFieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_PasswordFieldActionPerformed
-
-    private void updateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBtnActionPerformed
-        // TODO add your handling code here:
-        int selectRow = networkTable.getSelectedRow();
-
-        if(selectRow>=0){
-            String username= (String) networkTable.getValueAt(selectRow, 1);
-            String pwd= (String) networkTable.getValueAt(selectRow, 2);
-            user=system.getUserAccountDirectory().authenticateUser(username, pwd);
-
-            nameJTextField.setText(user.getName()+"");
-            uNameTextField.setText(user.getUsername()+"");
-            PasswordField.setText(user.getPassword()+"");
-            // system.getUserAccountDirectory().deleteUserAccount(user);
-
-        }
-        else {
-            JOptionPane.showMessageDialog(null,"Please select a row");
-        }
-        submitJButton.setEnabled(false);
-        deleteBtn.setEnabled(false);
-        updateBtn.setEnabled(false);
-        ConfirmBtn.setEnabled(true);
-    }//GEN-LAST:event_updateBtnActionPerformed
-
-    private void deleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBtnActionPerformed
-        // TODO add your handling code here:
-        int selectedRow = networkTable.getSelectedRow();
-        if(selectedRow>=0){
-            int selectionButton = JOptionPane.YES_NO_OPTION;
-            int selectionResult = JOptionPane.showConfirmDialog(null, "Are you sure to delete??","Warning",selectionButton);
-            if(selectionResult == JOptionPane.YES_OPTION){
-                String username= (String) networkTable.getValueAt(selectedRow, 1);
-                String pwd= (String) networkTable.getValueAt(selectedRow, 2);
-                UserAccount user=system.getUserAccountDirectory().authenticateUser(username, pwd);
-
-                //UserAccount user = (UserAccount) networkJTable.getValueAt(selectedRow, 0);
-                system.getUserAccountDirectory().deleteUserAccount(user);
-                system.getAdmissionDirectory().deleteTestingCenter(username);
-                //       system.getRestaurantDirectory().deleteRestaurent(user.getUsername());
-                populateNetworkTable();
-            }
-        }else{
-            JOptionPane.showMessageDialog(null, "Please select a Row!!");
-        }
-    }//GEN-LAST:event_deleteBtnActionPerformed
-
-    private void ConfirmBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmBtnActionPerformed
-        // TODO add your handling code here:
-
-        String name = nameJTextField.getText();
-        String uname=uNameTextField.getText();
-        String password=PasswordField.getText();
-
-        try {
-            if(name==null || name.isEmpty()){
-                throw new NullPointerException(" Name field is Empty");
-
-            }else if(name.length()<5 || Pattern.matches("^[A-Za-z]+$", name)==false){
-                throw new Exception("Please enter valid  Name");
-
-            }
-        } catch(NullPointerException e){
-            JOptionPane.showMessageDialog(null, " Name is Empty");
-
-            return;
-
-        }catch (Exception e){
-            JOptionPane.showMessageDialog(null, "  Name is invalid");
-
-            return;
-        }
-
-        try {
-            if(uname==null || uname.isEmpty()){
-                throw new NullPointerException("User Name field is Empty");
-
-            }else if(uname.length()<5){
-                throw new Exception("Please enter valid User Name");
-
-            }
-        } catch(NullPointerException e){
-            JOptionPane.showMessageDialog(null, "User Name is Empty");
-
-            return;
-
-        }catch (Exception e){
-            JOptionPane.showMessageDialog(null, " User Name is invalid");
-
-            return;
-        }
-
-        try {
-
-            if(password==null || password.isEmpty()){
-                throw new NullPointerException("Pwd field is Empty");
-            }else if(Pattern.matches("^(?=(.*[a-z]){1,})(?=(.*[\\d]){1,})(?=(.*[\\W]){1,})(?!.*\\s).{5,30}$", password)==false){
-                throw new Exception("Invalid Password");
-            }
-
-        }  catch(NullPointerException e){
-            JOptionPane.showMessageDialog(null, "Password is Empty");
-
-            return;
-        }catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Password is of invalid pattern");
-
-            return;
-        }
-
-        if (system.getUserAccountDirectory().checkIfUsernameIsUnique(uname)==false) {
-            JOptionPane.showMessageDialog(null,"  User Name already exists ");
-        }else{
-
-            system.getUserAccountDirectory().updateUserAccount(user,name,uname,password);
-            populateNetworkTable();
-            submitJButton.setEnabled(true);
-            deleteBtn.setEnabled(true);
-            updateBtn.setEnabled(true);
-            ConfirmBtn.setEnabled(false);
-            nameJTextField.setText("");
-            uNameTextField.setText("");
-            PasswordField.setText("");
-        }
-    }//GEN-LAST:event_ConfirmBtnActionPerformed
 
     private void BackbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BackbtnActionPerformed
         // TODO add your handling code here:
@@ -443,6 +314,140 @@ public class ManageAdmission extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_submitJButtonActionPerformed
 
+    private void updateBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateBtnActionPerformed
+        // TODO add your handling code here:
+        int selectRow = networkTable.getSelectedRow();
+
+        if(selectRow>=0){
+            String username= (String) networkTable.getValueAt(selectRow, 1);
+            String pwd= (String) networkTable.getValueAt(selectRow, 2);
+            user=system.getUserAccountDirectory().authenticateUser(username, pwd);
+
+            nameJTextField.setText(user.getName()+"");
+            uNameTextField.setText(user.getUsername()+"");
+            PasswordField.setText(user.getPassword()+"");
+            //            ContactField.setText(user.getContact()+ "");
+            //            AddressFiels.setText(user.getAddress()+ "");
+            // system.getUserAccountDirectory().deleteUserAccount(user);
+
+        }
+        else {
+            JOptionPane.showMessageDialog(null,"Please select a row");
+        }
+
+        submitJButton.setEnabled(false);
+        deleteBtn.setEnabled(false);
+        updateBtn.setEnabled(false);
+        ConfirmBtn.setEnabled(true);
+    }//GEN-LAST:event_updateBtnActionPerformed
+
+    private void ConfirmBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ConfirmBtnActionPerformed
+        // TODO add your handling code here:
+        String name = nameJTextField.getText();
+        String uname=uNameTextField.getText();
+        String password=PasswordField.getText();
+        //        String contact = ContactField.getText();
+        //        String address= AddressFiels.getText();
+
+        try {
+            if(name==null || name.isEmpty()){
+                throw new NullPointerException(" Name field is Empty");
+
+            }else if(name.length()<5 || Pattern.matches("^[A-Za-z]+$", name)==false){
+                throw new Exception("Please enter valid  Name");
+
+            }
+        } catch(NullPointerException e){
+            JOptionPane.showMessageDialog(null, " Name is Empty");
+
+            return;
+
+        }catch (Exception e){
+            JOptionPane.showMessageDialog(null, "  Name is invalid");
+
+            return;
+        }
+
+        try {
+            if(uname==null || uname.isEmpty()){
+                throw new NullPointerException("User Name field is Empty");
+
+            }else if(uname.length()<5){
+                throw new Exception("Please enter valid User Name");
+
+            }
+        } catch(NullPointerException e){
+            JOptionPane.showMessageDialog(null, "User Name is Empty");
+
+            return;
+
+        }catch (Exception e){
+            JOptionPane.showMessageDialog(null, " User Name is invalid");
+
+            return;
+        }
+
+        try {
+
+            if(password==null || password.isEmpty()){
+                throw new NullPointerException("Pwd field is Empty");
+            }else if(Pattern.matches("^(?=(.*[a-z]){1,})(?=(.*[\\d]){1,})(?=(.*[\\W]){1,})(?!.*\\s).{5,30}$", password)==false){
+                throw new Exception("Invalid Password");
+            }
+
+        }  catch(NullPointerException e){
+            JOptionPane.showMessageDialog(null, "Password is Empty");
+
+            return;
+        }catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Password is of invalid pattern");
+
+            return;
+        }
+
+        if (system.getUserAccountDirectory().checkIfUsernameIsUnique(uname)==false) {
+            JOptionPane.showMessageDialog(null,"  User Name already exists ");
+        }else{
+           
+            
+            system.getUserAccountDirectory().updateUserAccount(user,name,uname,password);
+            populateNetworkTable();
+
+            submitJButton.setEnabled(true);
+            deleteBtn.setEnabled(true);
+            updateBtn.setEnabled(true);
+            ConfirmBtn.setEnabled(false);
+
+            nameJTextField.setText("");
+            uNameTextField.setText("");
+            PasswordField.setText("");
+            //            ContactField.setText("");
+            //            AddressFiels.setText("");
+        }
+    }//GEN-LAST:event_ConfirmBtnActionPerformed
+
+    private void deleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBtnActionPerformed
+        // TODO add your handling code here:
+        int selectedRow = networkTable.getSelectedRow();
+        if(selectedRow>=0){
+            int selectionButton = JOptionPane.YES_NO_OPTION;
+            int selectionResult = JOptionPane.showConfirmDialog(null, "Are you sure to delete??","Warning",selectionButton);
+            if(selectionResult == JOptionPane.YES_OPTION){
+                String username= (String) networkTable.getValueAt(selectedRow, 1);
+                String pwd= (String) networkTable.getValueAt(selectedRow, 2);
+                UserAccount user=system.getUserAccountDirectory().authenticateUser(username, pwd);
+
+                //UserAccount user = (UserAccount) networkJTable.getValueAt(selectedRow, 0);
+                system.getUserAccountDirectory().deleteUserAccount(user);
+                //ystem.getCustomerDirectory().deleteCustomer(user.getUsername());
+
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Please select a Row!!");
+        }
+        populateNetworkTable();
+    }//GEN-LAST:event_deleteBtnActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Backbtn;
@@ -468,21 +473,17 @@ public class ManageAdmission extends javax.swing.JPanel {
         
        // for()
         for (UserAccount user : system.getUserAccountDirectory().getUserAccountList()) {
-           
             if ("Business.Role.AdmissionRole".equals(user.getRole().getClass().getName())) {
                 
-                
-                for(Admission adm:system.getAdmissionDirectory().getAdmissionList()){
-                    if (user.getUsername().equals(adm.getUserName())){
+               
                 Object[] row = new Object[4];
             
                 row[0] = user.getName();
                 row[1] = user.getUsername();
                 row[2] = user.getPassword();
-                row[3] = adm.getAvailibity();
 
                 model.addRow(row);
-            }
             
-        }}}}
+            
+        }}}
 }

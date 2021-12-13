@@ -18,7 +18,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Nikhil
+ * @author sshreeka
  */
 public class ManageTestingCenter extends javax.swing.JPanel {
 
